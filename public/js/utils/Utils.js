@@ -35,7 +35,8 @@ const table__footer = document.querySelector(".table__footer");
 const isDescriptionRequired =
   table__footer && JSON.parse(table__footer.dataset.isdescriptionrequired);
 
-console.log("isDescriptionRequired", isDescriptionRequired);
+// console.log("isDescriptionRequired", isDescriptionRequired);
+
 if (isDescriptionRequired) {
   const table__description = document.querySelectorAll(".table__description"); //get all the description table
   table__description.forEach((table) => {
@@ -100,11 +101,10 @@ add__field?.addEventListener("click", () => {
   const field__name = document.querySelector(".field__name");
   field__name.focus(); //Move the cursor to the text field
   //Fetch the last index and update the current index
-  const prevIndex = Number(
-    row.previousElementSibling.querySelector(".field__idx").innerHTML
-  );
+  const prevIndex =
+    row.previousElementSibling?.querySelector(".field__idx").innerHTML;
   const index = document.querySelector(".row__number");
-  index.innerHTML = prevIndex + 1;
+  if (prevIndex) index.innerHTML = Number(prevIndex) + 1;
 
   const submit__button = document.querySelector(".table__submit--button");
   submit__button.removeAttribute("disabled"); //enable the submit button
