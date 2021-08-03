@@ -162,6 +162,24 @@
           </div>
         </div>
 
+        <div class="row data-row">
+          <div class="col-md-6 mb-3">
+            <label class="required">Type of Event</label>
+            <select name="type" class="custom-select d-block w-100">
+              <option value="">Choose...</option>
+              <option>Cultural</option>
+              <option>Games</option>
+              <option>Sports</option>
+              <option>Technical</option>
+              <option>Others</option>
+
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid type.
+            </div>
+          </div>
+        </div>
+
         <%- include ("../partials/description") %>
 
 

@@ -21,17 +21,22 @@
         <div class="row data-row">
 
           <div class="col-md-6 mb-3">
-            <label class="required">Names of PI</label>
-            <input type="text" name="NameofPI" class="form-control">
+            <label class="required">RCID</label>
+            <input type="text" name="rcid" class="form-control">
             <div class="invalid-feedback">
               Please enter valid details.
             </div>
           </div>
+
           <div class="col-md-6 mb-3">
-            <label class="required">Names of CO->PI</label>
-            <input type="text" name="COtoPI" class="form-control">
+            <label class="required">COE</label>
+
+            <!-- COE  -->
+
+            <%- include ("../partials/coe") %>
+
             <div class="invalid-feedback">
-              Please enter valid details.
+              Please select a valid type.
             </div>
           </div>
         </div>
@@ -178,19 +183,7 @@
         </div>
         <div class="row data-row">
 
-          <div class="col-md-6 mb-3">
-            <label class="required">COE</label>
-
-            <!-- COE  -->
-
-            <%- include ("../partials/coe") %>
-
-            <div class="invalid-feedback">
-              Please select a valid type.
-            </div>
-          </div>
-        </div>
-
+          
 
         <%- include ("../partials/description") %>
 

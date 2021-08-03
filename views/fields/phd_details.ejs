@@ -22,89 +22,11 @@
         <div class="row data-row">
 
           <div class="col-md-6 mb-3">
-            <label class="required">Name of PI</label>
-            <input type="text" name="NameofPI" class="form-control">
-            <div class="invalid-feedback">
-              Please enter valid details.
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label class="required">Names of CO->PI</label>
-            <input type="text" name="COtoPI" class="form-control">
-            <div class="invalid-feedback">
-              Please enter valid details.
-            </div>
-          </div>
-        </div>
-        <div class="row data-row">
-
-          <div class="col-md-6 mb-3">
-            <label for="date" class="required">Sanctioned Date</label>
-            <input type="date" name="sanctionedDate" class="form-control date__control">
-            <div class="invalid-feedback">
-              Please enter valid details.
-            </div>
-          </div>
-
-        </div>
-        <div class="row data-row">
-
-          <div class="col-md-6 mb-3">
-            <label class="required">Duration</label>
-            <input type="text" name="duration" class="form-control">
-            <div class="invalid-feedback">
-              Please enter valid details.
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label class="required">Topic</label>
-            <input type="text" name="topic" class="form-control">
-            <div class="invalid-feedback">
-              Please enter valid details.
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label class="required">Grant amount received/Sanctioned amount</label>
-            <input type="text" name="amount" class="form-control">
-            <div class="invalid-feedback">
-              Please enter valid details.
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-3">
-            <label class="required">Objectives</label>
-            <input type="text" name="objectives" class="form-control">
-            <div class="invalid-feedback">
-              Please enter valid details.
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label class="required">Benefit in terms of learning/Skill/Knowledge obtained</label>
-            <input type="text" name="benefit" class="form-control">
-            <div class="invalid-feedback">
-              Please enter valid details.
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label class="required">Name of the Agency to whom submitted</label>
-            <input type="text" name="AgencyName" class="form-control">
-            <div class="invalid-feedback">
-              Please enter valid details.
-            </div>
-          </div>
-
-
-
-        </div>
-        <div class="row data-row">
-
-
-          <div class="col-md-4 mb-3">
-            <label class="required">Status</label>
-            <select name="level" class="custom-select d-block w-100">
+            <label class="required">Faculty ID</label>
+            <select name="id" class="custom-select d-block w-100">
               <option value="">Choose...</option>
-              <option>Work in Progress</option>
-              <option>Completed</option>
+              <option>Faculty 1</option>
+              <option>Faculty 2</option>
 
             </select>
             <div class="invalid-feedback">
@@ -112,7 +34,7 @@
             </div>
           </div>
 
-          <div class="col-md-4 mb-3">
+          <div class="col-md-6 mb-3">
             <label class="required">COE</label>
 
             <!-- COE  -->
@@ -124,12 +46,89 @@
             </div>
           </div>
         </div>
-        <label class="required">Description</label><br>
 
-        <div name="description" id="editor">
-          <p>This is the editor content.</p>
-          <div class="invalid-feedback">
-            Please enter valid details.
+        <div class="row data-row">
+
+          <div class="col-md-6 mb-3">
+            <label for="date" class="required">Date of Registration</label>
+            <input type="date" name="registrationDate" class="form-control date__control">
+            <div class="invalid-feedback">
+              Please enter valid details.
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="date" class="required">Defence Date</label>
+            <input type="date" name="defenceDate" class="form-control date__control">
+            <div class="invalid-feedback">
+              Please enter valid details.
+            </div>
+          </div>
+        </div>
+
+        <div class="row data-row">
+
+          <div class="col-md-6 mb-3">
+            <label class="required">Research Area</label>
+            <input type="text" name="area" class="form-control">
+            <div class="invalid-feedback">
+              Please enter valid details.
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="required">University Name</label>
+            <input type="text" name="university" class="form-control">
+            <div class="invalid-feedback">
+              Please enter valid details.
+            </div>
+          </div>
+        </div>
+
+        <div class="row data-row">
+          <div class="col-md-6 mb-3">
+            <label class="required">Research centre</label>
+            <input type="text" name="centre" class="form-control">
+            <div class="invalid-feedback">
+              Please enter valid details.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="required">Guide Name and affiliated to</label>
+            <input type="text" name="guide" class="form-control">
+            <div class="invalid-feedback">
+              Please enter valid details.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row data-row">
+          <div class="col-md-6 mb-3">
+            <label class="required">Co-Guide Name and affiliated to</label>
+            <input type="text" name="coguide" class="form-control">
+            <div class="invalid-feedback">
+              Please enter valid details.
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="required">Status</label>
+            <select name="status" class="custom-select d-block w-100">
+              <option value="">Choose...</option>
+              <option>Registered</option>
+              <option>Course Work Completed</option>
+              <option>Comprehensive Viva Completed</option>
+              <option>Open Talk 1 Completed</option>
+              <option>Open Talk 2 Completed</option>
+              <option>Collaquirm Completed</option>
+              <option>Thesis Submitted</option>
+              <option>Defence Completed</option>
+
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid type.
+            </div>
           </div>
         </div>
 
