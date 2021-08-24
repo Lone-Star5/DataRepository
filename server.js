@@ -13,7 +13,7 @@ const publicDirectory = path.join(__dirname, "public");
 app.use(express.static(publicDirectory));
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
-  console.log("Devlopment Build");
+  console.log("Development Build");
 
   const liveReloadServer = livereload.createServer();
 
