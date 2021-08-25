@@ -31,3 +31,13 @@ if (modal) {
     }
   });
 }
+
+const megaMenu = document.querySelector(".nav__menu--mega");
+
+megaMenu?.addEventListener("click", function () {
+  const menu = document.querySelector(".nav__menu--submenu");
+  console.log("Mega Dropdown Clicked!");
+  if (menu) {
+    menu.classList.toggle("submenu--active");
+  }
+});
