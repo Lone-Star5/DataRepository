@@ -1,10 +1,10 @@
 <%- include ("../partials/header") %>
 
-<div class="container-fluid">
-  <section id="form">
-    <form id="myForm" class="needs-validation" novalidate action="/faculty/WellBeingClub"
-      data-isinsertmode=<%=isInsertMode%>>
-      <div class="container-fluid">
+  <div class="container-fluid px-5 pt-2">
+    <section id="form">
+      <form id="myForm" class="needs-validation" novalidate action="/faculty/WellBeingClub"
+        data-isinsertmode=<%=isInsertMode%>>
+
 
         <!-- Header Section -->
 
@@ -33,13 +33,7 @@
               Please enter valid details.
             </div>
           </div>
-          <div class="col-md-6 mb-3">
-            <label class="required">Topic</label>
-            <input type="text" name="topic" class="form-control">
-            <div class="invalid-feedback">
-              Please enter valid details.
-            </div>
-          </div>
+
 
         </div>
 
@@ -106,6 +100,8 @@
               Please enter valid details.
             </div>
           </div>
+        </div>
+        <div class="row data-row">
           <div class="col-md-6 mb-3">
             <label class="required">Number of Participants</label>
             <input type="text" name="participantsNum" class="form-control">
@@ -114,9 +110,17 @@
             </div>
           </div>
 
+          <div class="col-md-6 mb-3">
+            <label class="required">Topic</label>
+            <input type="text" name="topic" class="form-control">
+            <div class="invalid-feedback">
+              Please enter valid details.
+            </div>
+          </div>
+
         </div>
         <div class="row data-row">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-6 mb-3">
             <label class="required">Event Level</label>
             <select name="eventLevel" class="custom-select d-block w-100" id="selectBox" onChange="changeFunc();">
               <option value="">Choose...</option>
@@ -133,7 +137,7 @@
             </select>
           </div>
 
-          <div class="col-md-4 mb-3">
+          <div class="col-md-6 mb-3">
             <label class="required">National/International</label>
             <select name="level" class="custom-select d-block w-100">
               <option value="">Choose...</option>
@@ -148,30 +152,27 @@
 
 
         </div>
-        <label class="required">Event Description</label><br>
 
-        <div name="description" id="editor">
-          <p>This is the editor content.</p>
-          <div class="invalid-feedback">
-            Please enter valid details.
+        <div class="row data-row">
+          <div class="col-md-12 mb-3">
+            <%- include ("../partials/description") %>
+
+
+              <div class="submit-button">
+                <%if(isInsertMode){%>
+                  <button class="btn btn-primary btn-lg btn-block buttons" type="submit">
+                    Submit</button>
+                  <%} else{%>
+                    <button class="btn btn-secondary btn-lg btn-block buttons" type="submit">
+                      Update</button>
+                    <span id='variableJSON' hidden>
+                      <%= JSON.stringify(data); %>
+                    </span>
+                    <%}%>
+              </div>
           </div>
         </div>
 
-        <%- include ("../partials/description") %>
-
-        <div class="submit-button">
-          <%if(isInsertMode){%>
-          <button class="btn btn-primary btn-lg btn-block buttons" type="submit">
-            Submit</button>
-          <%} else{%>
-          <button class="btn btn-secondary btn-lg btn-block buttons" type="submit">
-            Update</button>
-          <span id='variableJSON' hidden>
-            <%= JSON.stringify(data); %>
-          </span>
-          <%}%>
-        </div>
-        </div>
 
       </form>
 
@@ -186,9 +187,9 @@
 
   <%- include ("../partials/footer") %>
 
-          
-          </script>
 
-          </body>
+    </script>
 
-          </html>
+    </body>
+
+    </html>

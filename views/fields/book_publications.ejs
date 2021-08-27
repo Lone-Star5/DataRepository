@@ -1,10 +1,10 @@
 <%- include ("../partials/header") %>
 
-<div class="container-fluid">
-  <section id="form">
-    <form id="myForm" class="needs-validation" novalidate action="/faculty/BookPublications"
-      data-isinsertmode=<%=isInsertMode%>>
-      <div class="container-fluid">
+  <div class="container-fluid px-5 pt-2">
+    <section id="form">
+      <form id="myForm" class="needs-validation" novalidate action="/faculty/BookPublications"
+        data-isinsertmode=<%=isInsertMode%>>
+
 
         <!-- Header Section -->
 
@@ -81,9 +81,9 @@
 
             <%- include ("../partials/coe") %>
 
-            <div class="invalid-feedback">
-              Please select a valid type.
-            </div>
+              <div class="invalid-feedback">
+                Please select a valid type.
+              </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="date" class="required">Date</label>
@@ -95,38 +95,43 @@
         </div>
 
 
-        <%- include ("../partials/description") %>
+        <div class="row data-row">
+          <div class="col-md-12 mb-3">
+            <%- include ("../partials/description") %>
 
-        <div class="submit-button">
-          <%if(isInsertMode){%>
-          <button class="btn btn-primary btn-lg btn-block buttons" type="submit">
-            Submit</button>
-          <%} else{%>
-          <button class="btn btn-secondary btn-lg btn-block buttons" type="submit">
-            Update</button>
-          <span id='variableJSON' hidden>
-            <%= JSON.stringify(data); %>
-          </span>
-          <%}%>
+
+              <div class="submit-button">
+                <%if(isInsertMode){%>
+                  <button class="btn btn-primary btn-lg btn-block buttons" type="submit">
+                    Submit</button>
+                  <%} else{%>
+                    <button class="btn btn-secondary btn-lg btn-block buttons" type="submit">
+                      Update</button>
+                    <span id='variableJSON' hidden>
+                      <%= JSON.stringify(data); %>
+                    </span>
+                    <%}%>
+              </div>
+          </div>
         </div>
-      </div>
-
-    </form>
 
 
-
-  </section>
-
-</div>
-
-<!-- Footer -->
+      </form>
 
 
-<%- include ("../partials/footer") %>
 
-          
-          </script>
+    </section>
 
-          </body>
+  </div>
 
-          </html>
+  <!-- Footer -->
+
+
+  <%- include ("../partials/footer") %>
+
+
+    </script>
+
+    </body>
+
+    </html>
